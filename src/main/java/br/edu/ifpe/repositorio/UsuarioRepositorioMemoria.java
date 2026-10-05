@@ -57,12 +57,6 @@ public final class UsuarioRepositorioMemoria {
         return Collections.unmodifiableList(new ArrayList<>(POR_CPF.values()));
     }
 
-    public static void limpar() {
-        POR_CPF.clear();
-        POR_EMAIL.clear();
-        SEQUENCIA.set(1);
-    }
-
     private static String normalizarEmail(String email) {
         if (email == null) {
             return "";
