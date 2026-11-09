@@ -1,23 +1,19 @@
 # Changelog
 
-Todas as alterações relevantes do projeto Compila-Ai serão documentadas neste arquivo.
+Registro das alterações e funcionalidades implementadas no projeto Compila-Ai.
 
-## [Em desenvolvimento]
+## [Aula 05] - Consolidação das Issues 0 e 1
 
-### Adicionado
-- Implementação da estrutura de domínio de usuários.
-- Implementação do cadastro de usuários.
-- Implementação do repositório de usuários em memória.
-- Implementação das validações de CPF e senha.
+### Added
+- Cadastro de usuários com atribuição de perfis (roles).
+- Modelagem do domínio de usuários.
+- Validação de CPF e e-mail.
 - Implementação de exceções personalizadas para cadastro.
+- Gerenciamento de editais.
+- Validação de datas dos períodos de submissão e avaliação.
+- Implementação dos serviços e repositórios em memória.
 
-### Alterado
+### Technical
+- Organização do projeto em camadas de domínio, serviço, repositório e utilitários.
+- Utilização de Java e Maven.
 
-### Corrigido
-
-### Removido
-
-### Planejado
-- Implementação do domínio de editais.
-- Implementação do cadastro de editais.
-- Implementação dos testes automatizados.
