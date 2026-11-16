@@ -1,6 +1,8 @@
 package br.edu.ifpe.dominio;
 
 public enum Perfil {
+    ADMIN_GERAL("ROLE_ADMIN_GERAL"),
+    GESTOR("ROLE_GESTOR"),
     COORDENADOR("ROLE_COORDENADOR"),
     AVALIADOR("ROLE_AVALIADOR");
 
