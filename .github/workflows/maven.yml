@@ -1,6 +1,6 @@
+on:
 name: Java CI with Maven and Docker
 
-on:
   push:
     branches: [ main, develop, 'feature/**' ]
   pull_request:
