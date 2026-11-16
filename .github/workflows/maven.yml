@@ -1,9 +1,11 @@
+name: Java CI with Maven and Docker
+
 on:
   push:
     branches:
       - main
       - develop
-      - 'feature/**' # Captura qualquer push em branches como feature/issue0, feature/login, etc.
+      - 'feature/**'
   pull_request:
     branches:
       - main
@@ -24,5 +26,14 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Compilar e Executar Testes com o Maven
-      run: mvn clean test # Alterado de compile para test
+    - name: Compilar e Gerar o pacote (JAR) com o Maven
+      run: mvn clean package -DskipTests
+
+    - name: Construir a Imagem Docker
+      run: docker build -t sistema-editais:latest .
+
+    - name: Executar o Container para teste
+      run: |
+        docker run -d --name editais-ci sistema-editais:latest
+        sleep 5
+        docker logs editais-ci
